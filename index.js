@@ -17,7 +17,7 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 
 
 app.get('/', (req, res) => {
-    res.send('Hello, from TourX!')
+    res.send('Hello, from TourX server!')
   })
 
   
@@ -30,7 +30,7 @@ client.connect(err => {
   const reviewCollection = client.db("tourX").collection("review");
 
 
-//add o package and img upload 
+//add o package and image upload 
 app.post('/addPackage' , (req,res)=>{
         const package = req.body;
         console.log(package);
